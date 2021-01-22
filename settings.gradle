@@ -1,0 +1,3 @@
+include ':javalib'
+include ':app'
+rootProject.name = "homework2"

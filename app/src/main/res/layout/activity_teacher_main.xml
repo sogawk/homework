@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="teacherMainPageViewModel"
+            type="com.example.homework2.viewModel.TeacherMainPageViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:text="@={teacherMainPageViewModel.welcomeMessage}"/>
+
+        <Button
+            android:id="@+id/publishHomeWork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/havePublished"
+            android:textSize="30dp"
+            android:onClick="@{()->teacherMainPageViewModel.publishHomework()}"
+            android:text="发布作业"/>
+
+        <Button
+            android:id="@+id/havePublished"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/waitForJudge"
+            android:textSize="30dp"
+            android:onClick="@{()->teacherMainPageViewModel.showHavePublished()}"
+            android:text="已发布作业"/>
+
+        <Button
+            android:id="@+id/waitForJudge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/studentList"
+            android:textSize="30dp"
+            android:onClick="@{()->teacherMainPageViewModel.showWaitForJudge()}"
+            android:text="待批改作业"/>
+
+        <Button
+            android:id="@+id/studentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gradeList"
+            android:textSize="30dp"
+            android:onClick="@{()->teacherMainPageViewModel.showStudentsList()}"
+            android:text="学生列表"/>
+
+        <Button
+            android:id="@+id/gradeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:textSize="30dp"
+            android:onClick="@{()->teacherMainPageViewModel.showGradeList()}"
+            android:text="成绩单"/>
+
+
+    </RelativeLayout>
+
+
+</layout>
