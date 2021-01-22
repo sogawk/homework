@@ -11,7 +11,8 @@ import androidx.viewpager.widget.PagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyPagerAdapter extends PagerAdapter {
+//学生的作业左右滑动的adapter
+public class MyViewPagerAdapter extends PagerAdapter {
     private List<ImageView> mList = new ArrayList<>();
 
     public List<ImageView> getmList() {

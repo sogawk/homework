@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--教师批改作业的主界面-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.Light"
-    tools:context=".activity.HomePageActivity"
+    tools:context=".activity.TeacherJudgeHomeWorkActivity"
     android:orientation="horizontal">
 
 

@@ -7,20 +7,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyLayoutMannager extends LinearLayoutManager {
+//自定义的recycleView的manager
+public class MyRecycleViewManager extends LinearLayoutManager {
 
     PagerSnapHelper pagerSnapHelper;
 
-    public MyLayoutMannager(Context context) {
+    public MyRecycleViewManager(Context context) {
         super(context);
         pagerSnapHelper = new PagerSnapHelper();
     }
 
-    public MyLayoutMannager(Context context, int orientation, boolean reverseLayout) {
+    public MyRecycleViewManager(Context context, int orientation, boolean reverseLayout) {
         super(context, orientation, reverseLayout);
     }
 
-    public MyLayoutMannager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public MyRecycleViewManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 

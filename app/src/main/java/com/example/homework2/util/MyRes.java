@@ -1,5 +1,6 @@
 package com.example.homework2.util;
 
+//通用的liveData参数，用于viewModel和activity之间通信
 public class MyRes {
     String status;
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--上下滑动的一个recycleView的item， 这么一个界面就是一个学生的所有作业，其中包含可以左右滑动的viewpager-->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
+//程序启动的activity，用于判断登陆状态和跳转
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,6 +26,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         super.onCreate(savedInstanceState);
-//        tt
     }
 }

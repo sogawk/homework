@@ -6,13 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
 
 import com.example.homework2.R;
-import com.example.homework2.adapter.StudentAdapter;
+import com.example.homework2.adapter.StudentListAdapter;
 import com.example.homework2.model.MyData;
 
+//学生列表
 public class StudentListActivity extends AppCompatActivity {
 
     @Override
@@ -22,9 +22,9 @@ public class StudentListActivity extends AppCompatActivity {
 
         setTitle("学生列表");
 
-        StudentAdapter studentAdapter = new StudentAdapter(StudentListActivity.this, R.layout.student_list_item, MyData.getStudentList());
+        StudentListAdapter studentListAdapter = new StudentListAdapter(StudentListActivity.this, R.layout.student_list_item, MyData.getStudentList());
         ListView stuListView = findViewById(R.id.student_list_view);
-        stuListView.setAdapter(studentAdapter);
+        stuListView.setAdapter(studentListAdapter);
     }
 
     @Override

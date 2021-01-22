@@ -1,7 +1,6 @@
 package com.example.homework2.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +17,7 @@ import com.example.homework2.view.WorkViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
+//学生上下滑动的adapter
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MviewHolder> {
     List<String> lists;
 
@@ -40,7 +40,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Mv
     @Override
     public MviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.one_student_works_item, parent, false);
 
         MviewHolder mviewHolder = new MviewHolder(view);
 
@@ -59,7 +59,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Mv
             list.add(imageView);
         }
 //        List<ImageView> list = MyData.getMap().get(string);
-        holder.myPagerAdapter.setmList(list);
+        holder.myViewPagerAdapter.setmList(list);
 
         holder.textView.setText("第" + position + "页");
     }
@@ -72,16 +72,16 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Mv
 
     static class MviewHolder extends RecyclerView.ViewHolder {
         TextView textView;
-        MyPagerAdapter myPagerAdapter;
+        MyViewPagerAdapter myViewPagerAdapter;
 
         public MviewHolder(@NonNull View itemView) {
             super(itemView);
 
             textView = itemView.findViewById(R.id.ttt);
 
-            myPagerAdapter = new MyPagerAdapter();
+            myViewPagerAdapter = new MyViewPagerAdapter();
             WorkViewPager workViewPager = itemView.findViewById(R.id.workViewPager);
-            workViewPager.setAdapter(myPagerAdapter);
+            workViewPager.setAdapter(myViewPagerAdapter);
         }
     }
 }

@@ -16,12 +16,13 @@ import com.example.homework2.model.Student;
 
 import java.util.List;
 
-public class StudentAdapter extends ArrayAdapter<Student> {
+//学生列表ListView的adapter
+public class StudentListAdapter extends ArrayAdapter<Student> {
 
 
     private int resourceId;
 
-    public StudentAdapter(@NonNull Context context, int textViewResourceId, @NonNull List<Student> objects) {
+    public StudentListAdapter(@NonNull Context context, int textViewResourceId, @NonNull List<Student> objects) {
         super(context, textViewResourceId, objects);
         this.resourceId = textViewResourceId;
     }
